@@ -4,6 +4,7 @@ import * as cdk from 'aws-cdk-lib';
 import { BackendStackDev } from '../lib/backend-stack-dev';
 import { SecretStackDev } from '../lib/secret-stack-dev';
 import { RdsStackDev } from '../lib/rds-stack-dev';
+import { FrontEndStackDev } from '../lib/frontend-stack-dev';
 
 const app = new cdk.App();
 const backendStackDev = new BackendStackDev(app, 'BackendStackDev', {
@@ -21,6 +22,9 @@ const backendStackDev = new BackendStackDev(app, 'BackendStackDev', {
 
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
 });
+
+const frontendStackDev = new FrontEndStackDev(app, "FrontEndStackDev", {})
+
 const secretStackDev = new SecretStackDev(app, "SecretStackDev", {})
 
 const rdsStackDev = new RdsStackDev(app, "RdsStackDev", {})

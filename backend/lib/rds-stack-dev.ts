@@ -27,7 +27,7 @@ export class RdsStackDev extends cdk.Stack {
     const creds = new rds.DatabaseSecret(this, 
       'environmentSecretsDev1', {
       secretName: "environmentSecretsDev1",
-      username: "admin"
+      username: "techdev"
     })
 
     // 👇 create RDS instance

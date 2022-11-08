@@ -19,7 +19,8 @@ export class FrontEndStackDev extends Stack {
         //Define the react app S3 bucket
         const websiteBucket = new Bucket(this, 'segment-app-dev-bucket', {
             websiteIndexDocument: 'index.html',
-            publicReadAccess:true
+            publicReadAccess:true,
+            bucketName: 'segment-react-app-dev'
         })
 
         //Define the react app bucket deployment
